@@ -1,0 +1,291 @@
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+}
+
+*,
+*:before,
+*::after{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+margin: 0;
+}
+/* Container */
+.container{
+    
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 0;
+}
+
+/* Sections */
+
+.section--gray{
+    background-color: #f8f8f8;
+}
+
+.section__Text{
+    margin: 45px auto 0;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: #999;
+    text-align: center;
+
+}
+
+.section__title::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: red;
+    margin: 38px  auto 0;
+
+}
+
+.section__suptitle{
+    margin: 0 auto 22px;
+    font-size: 24px;
+    color: #333;
+    font-family: 'Kaushan Script', cursive;
+    text-align: center;
+}
+
+.section__title{
+    color: #333;
+    font-size: 30px;
+   
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+}
+
+.section{
+    margin: 80 auto 0;
+}
+
+.section--devices{
+    background: 
+    url("/assest/images/Intro.jpg") center
+    no-repeat;
+    background-size: cover;
+}
+
+.section__header{
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+}
+
+/* Devices */
+
+.devices{
+    margin: 0 auto ;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+.devices__item{
+    display: block;
+}
+
+.devices__item--iphone{
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    z-index: 1;
+}
+
+
+/*Servic*/
+
+.section--service{
+margin: 113px auto 0;
+}
+
+.wedo{
+    display: flex;
+    margin: 95px auto 119px;
+}
+
+.wedo__item{
+    width: 50%;
+    
+}
+
+
+/* Accordion */
+
+.accordion__item{
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+}
+
+.accordion__header{
+    padding: 15px 20px 15px 65px;
+   border-bottom: 1px solid transparent;
+   position: relative;
+
+   cursor: pointer;
+
+}
+
+.accordion__item.active
+.accordion__header{
+    border-bottom-color: #e5e5e5 ;
+}
+
+.accordion__item.active
+.accordion__content{
+    
+    display: none;
+}
+.accordion__item.active
+.accordion__header::after{
+    transform: translateY(-45%) rotate(-45deg);
+}
+
+.accordion__header::after{
+    content: "";
+    display: block;
+    width: 13px;
+    height: 13px;
+
+
+    border-top: 3px solid #ccc;
+    border-right: 3px solid #ccc;
+
+    position: absolute;
+    top: 55%;
+    right: 20px;
+    z-index: 1;
+
+    transform: translateY(-45%) rotate(-45deg);
+}
+
+
+.accordion__icon{
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 20px;
+
+    transform: translateY(-50%);
+}
+
+.accordion__content{
+
+    display: none;
+    padding: 15px 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: #999;
+    font-style: italic ;
+    font-weight: 300;
+
+}
+
+.accordion__title{
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* Reviews */
+
+.reviews{
+    position: relative;
+    padding: 70px 110px 70px 110px;
+}
+
+.reviews__item{
+    padding-left: 205px;
+    position: relative;
+}
+
+.reviews__photo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.reviews__text{
+    margin-bottom: 29px;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 300;
+    color: #999;
+}
+
+.reviews__author{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+    color: #333;
+    
+}
+
+.reviews__author::before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle ;
+    width: 60px;
+    height: 3px;
+    margin-right: 10px;
+
+    background-color: #f38181;
+}
+
+
+.reviews__btn{
+    font-size: 0;
+    color: transparent;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+
+
+}
+
+.reviews__btn::after{
+    content: "";
+    display: block;
+    width: 13px;    
+    height: 13px;
+
+    border-top: 3px solid #ccc;
+    border-left: 3px solid #ccc;
+
+    
+}
+
+.reviews__btn--prev{
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+.reviews__btn--next{
+    right: 0;
+    transform: rotate(135deg);
+}
+
+@media screen and (max-width: 1170px) {
+    .wedo{
+        display: block;
+        flex-direction: column;
+        margin: 95px auto 119px;
+                justify-content: center;
+    }
+    .wedo__item{
+        width: 100%;
+    }
+    
+}
